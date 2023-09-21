@@ -6,7 +6,9 @@ const Root = () => {
   return (
     <div>
       <HeaderNav></HeaderNav>
-      <Outlet></Outlet>
+      <div className="min-h-fit">
+        <Outlet></Outlet>
+      </div>
       <Footer></Footer>
     </div>
   );
