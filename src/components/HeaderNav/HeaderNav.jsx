@@ -53,7 +53,7 @@ const HeaderNav = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn btn-primary">Button</a>
+        <a className="btn btn-primary capitalize">Start Applying</a>
       </div>
     </div>
   );

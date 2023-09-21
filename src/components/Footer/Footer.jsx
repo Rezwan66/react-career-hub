@@ -16,7 +16,7 @@ const Footer = () => {
         <span className="text-4xl font-extrabold inline-block">CareerHub</span>
         <p>Providing reliable jobs since 1996.</p>
         <div>
-          <img src="../../../public/socials.svg" className="w-36" alt="" />
+          <img src="src/assets/icons/social.png" className="w-36" alt="" />
         </div>
       </aside>
       <nav>
