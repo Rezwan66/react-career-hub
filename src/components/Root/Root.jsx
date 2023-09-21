@@ -5,8 +5,8 @@ import HeaderNav from '../HeaderNav/HeaderNav';
 const Root = () => {
   return (
     <div>
-      <HeaderNav></HeaderNav>
-      <div className="min-h-fit">
+      <div className="max-w-[1440px] mx-auto">
+        <HeaderNav></HeaderNav>
         <Outlet></Outlet>
       </div>
       <Footer></Footer>

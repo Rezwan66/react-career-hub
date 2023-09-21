@@ -21,7 +21,7 @@ const HeaderNav = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100n max-w-[1440px] mx-auto">
+    <div className="navbar bg-base-100n">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -53,7 +53,9 @@ const HeaderNav = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn btn-primary capitalize">Start Applying</a>
+        <a className="btn btn-primary capitalize rounded-lg bg-gradient-to-r from-blue-500 to-indigo-500 text-white">
+          Apply Now
+        </a>
       </div>
     </div>
   );
