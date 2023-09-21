@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 const Job = ({ job }) => {
   const { id, logo } = job;
@@ -7,6 +7,10 @@ const Job = ({ job }) => {
       <img src={logo} alt="" />
     </div>
   );
+};
+
+Job.propTypes = {
+  job: PropTypes.object,
 };
 
 export default Job;
