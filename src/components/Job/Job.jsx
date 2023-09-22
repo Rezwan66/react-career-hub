@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { MdOutlineLocationOn } from 'react-icons/md';
 import { AiOutlineDollar } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const Job = ({ job }) => {
   const {
@@ -14,7 +15,7 @@ const Job = ({ job }) => {
     salary,
   } = job;
   return (
-    <div className="card card-compact bg-base-100 shadow-xl">
+    <div className="card card-compact bg-base-100 shadow-xl p-10">
       <figure>
         <img src={logo} alt="Company Logo" />
       </figure>
@@ -40,9 +41,11 @@ const Job = ({ job }) => {
           </h2>
         </div>
         <div className="card-actions justify-start">
-          <button className="btn btn-primary capitalize bg-gradient-to-r from-blue-500 to-indigo-500 text-white">
-            View Details
-          </button>
+          <Link to={`/job/${id}`}>
+            <button className="btn btn-primary capitalize bg-gradient-to-r from-blue-500 to-indigo-500 text-white">
+              View Details
+            </button>
+          </Link>
         </div>
       </div>
     </div>

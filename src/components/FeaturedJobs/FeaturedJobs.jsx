@@ -13,7 +13,7 @@ const FeaturedJobs = () => {
   console.log(jobs);
   return (
     <div>
-      <div>
+      <div className="mb-8">
         <h2 className="text-5xl text-center font-semibold">
           Featured Jobs: {jobs.length}
         </h2>

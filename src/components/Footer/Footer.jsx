@@ -1,3 +1,5 @@
+import socialImage from '../../assets/icons/social.png';
+
 const Footer = () => {
   return (
     <footer className=" px-10 py-20 bg-neutral text-neutral-content">
@@ -19,7 +21,7 @@ const Footer = () => {
           </span>
           <p>Providing reliable jobs since 1996.</p>
           <div>
-            <img src="src/assets/icons/social.png" className="w-36" alt="" />
+            <img src={socialImage} className="w-36" alt="" />
           </div>
         </aside>
         <nav>
