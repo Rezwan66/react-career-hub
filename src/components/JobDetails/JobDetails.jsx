@@ -1,6 +1,9 @@
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 import { AiOutlineDollar } from 'react-icons/ai';
 import { MdOutlineLocationOn } from 'react-icons/md';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { saveJobApplication } from '../../utility/localstorage';
 
 const JobDetails = () => {
   const jobs = useLoaderData();
@@ -10,10 +13,6 @@ const JobDetails = () => {
   const {
     contact_information,
     job_title,
-    company_name,
-    remote_or_onsite,
-    location,
-    job_type,
     salary,
     educational_requirements,
     experiences,
@@ -21,6 +20,10 @@ const JobDetails = () => {
     job_responsibility,
   } = job;
   // console.log(job);
+  const handleApply = () => {
+    saveJobApplication(idInt);
+    toast('You have applied successfully !');
+  };
   return (
     <div>
       <h2 className="text-center text-5xl font-bold">Job Details</h2>
@@ -57,12 +60,16 @@ const JobDetails = () => {
             {contact_information.address}
           </h2>
           <Link>
-            <button className="btn btn-primary w-full capitalize bg-gradient-to-r from-blue-500 to-indigo-500 text-white">
+            <button
+              onClick={handleApply}
+              className="btn btn-primary w-full capitalize bg-gradient-to-r from-blue-500 to-indigo-500 text-white"
+            >
               Apply Now
             </button>
           </Link>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
